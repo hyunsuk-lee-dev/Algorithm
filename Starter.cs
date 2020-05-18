@@ -57,6 +57,7 @@ namespace Algorithm
 
             //Console.WriteLine(EquationN.Solution(5,12));
 
+            Console.WriteLine("Hello World");
             Console.WriteLine(EquationN.Solution(5,24));
         }
 
