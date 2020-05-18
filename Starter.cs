@@ -52,7 +52,7 @@ namespace Algorithm
             //Console.WriteLine(WordPuzzle.Solution(new string[] { "ba", "an", "nan", "ban", "n" }, "banana"));
 
 
-            //Console.WriteLine(Tournament.Solution(8,4,7));
+            Console.WriteLine(Tournament.Solution(8,4,7));
 
 
             //Console.WriteLine(EquationN.Solution(5,12));
