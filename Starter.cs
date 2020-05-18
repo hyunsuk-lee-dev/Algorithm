@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CodingTest
+namespace Algorithm
 {
-    static class Program
+    static class Starter
     {
         static void Main(string[] args)
         {
@@ -56,9 +56,8 @@ namespace CodingTest
 
 
             //Console.WriteLine(EquationN.Solution(5,12));
+
             Console.WriteLine(EquationN.Solution(5,24));
-
-
         }
 
         static string ArrayToString<T>(this T[] array)

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CodingTest
+namespace Algorithm
 {
     /// <summary>
     /// 아래와 같이 5와 사칙연산만으로 12를 표현할 수 있습니다.
