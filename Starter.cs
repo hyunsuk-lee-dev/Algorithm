@@ -52,13 +52,14 @@ namespace Algorithm
             //Console.WriteLine(WordPuzzle.Solution(new string[] { "ba", "an", "nan", "ban", "n" }, "banana"));
 
 
-            Console.WriteLine(Tournament.Solution(8,4,7));
+            //Console.WriteLine(Tournament.Solution(8,4,7));
 
 
-            //Console.WriteLine(EquationN.Solution(5,12));
+            //Console.WriteLine(EquationN.Solution(5,24));
+            //Console.WriteLine(EquationN.Solution(2,11));
 
-            Console.WriteLine("Hello World");
-            Console.WriteLine(EquationN.Solution(5,24));
+            Console.WriteLine(Tiles.Solution(5));
+            Console.WriteLine(Tiles.Solution(6));
         }
 
         static string ArrayToString<T>(this T[] array)

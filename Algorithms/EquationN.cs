@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,6 +18,7 @@ namespace Algorithm
     /// </summary>
     public class EquationN
     {
+        delegate int Operation(int a, int b);
         /// <summary>
         /// </summary>
         /// <param name="N"> N은 1 이상 9 이하입니다. </param>
@@ -26,41 +28,60 @@ namespace Algorithm
         /// 최솟값이 8보다 크면 -1을 return 합니다.
         public static int Solution(int N, int number)
         {
+            List<Operation> operations = new List<Operation>() { Plus, Subtract, Multiply, Divide };
+
             List<int>[] numbers = new List<int>[8];
 
-            int normalNumber = N;
+            int normalNumber = 0;
 
             for(int i = 0 ; i < 8 ; i++)
             {
                 numbers[i] = new List<int>();
 
-                if(i > 0)
-                {
-                    foreach(int num in numbers[i - 1])
-                    {
-                        if(!numbers[i].Contains(num + N) && num + N > 0)
-                            numbers[i].Add(num + N);
-                        if(!numbers[i].Contains(num - N) && num - N > 0)
-                            numbers[i].Add(num - N);
-                        if(!numbers[i].Contains(num * N) && num * N > 0)
-                            numbers[i].Add(num * N);
-                        if(!numbers[i].Contains(num / N) && num / N > 0)
-                            numbers[i].Add(num / N);
-                    }
-                }
-                
+                normalNumber *= 10;
+                normalNumber += N;
 
-                if(!numbers[i].Contains(normalNumber))
-                    numbers[i].Add(normalNumber);
+                numbers[i].Add(normalNumber);
+
+                for(int j = 0; j < i; j++)
+                {
+                    foreach(Operation operation in operations)
+                        numbers[i].AddRange(Calculate(numbers[j], numbers[i - j - 1], operation));
+                }
+
+                numbers[i] = numbers[i].Distinct().ToList();
 
                 if(numbers[i].Contains(number))
                     return i + 1;
 
-                normalNumber *= 10;
-                normalNumber += N;
             }
 
             return -1;
         }
+
+        static int Plus(int a, int b) => a + b;
+        static int Subtract(int a, int b) => a - b;
+        static int Multiply(int a, int b) => a * b;
+        static int Divide(int a, int b) => b != 0 ? a / b : 0;
+
+        static List<int> Calculate(List<int> aList, List<int> bList, Operation operation)
+        {
+            List<int> resultList = new List<int>();
+
+            foreach(int a in aList)
+            {
+                foreach(int b in bList)
+                {
+                    int result = operation(a, b);
+                    if(!resultList.Contains(result))
+                        resultList.Add(result);
+                }
+            }
+
+            return resultList;
+        }
+
+
+
     }
 }

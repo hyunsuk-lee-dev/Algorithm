@@ -74,9 +74,10 @@
     <Compile Include="Algorithms\Tournament.cs" />
     <Compile Include="Algorithms\Tower.cs" />
     <Compile Include="Algorithms\WordPuzzle.cs" />
-    <Compile Include="EquationN.cs" />
+    <Compile Include="Algorithms\EquationN.cs" />
     <Compile Include="Starter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tiles.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
