@@ -8,18 +8,20 @@ using System.Threading.Tasks;
 namespace Algorithm
 {
     /// <summary>
-    /// 아래와 같이 5와 사칙연산만으로 12를 표현할 수 있습니다.
-    /// 
-    /// 12 = 5 + 5 + (5 / 5) + (5 / 5)
-    /// 12 = 55 / 5 + 5 / 5
-    /// 12 = (55 + 5) / 5
-    /// 
-    /// 5를 사용한 횟수는 각각 6,5,4 입니다. 그리고 이중 가장 작은 경우는 4입니다.
+    /// https://programmers.co.kr/learn/courses/30/lessons/42895
+    /// DP
     /// </summary>
     public class EquationN
     {
         delegate int Operation(int a, int b);
         /// <summary>
+        /// /// 아래와 같이 5와 사칙연산만으로 12를 표현할 수 있습니다.
+        /// 
+        /// 12 = 5 + 5 + (5 / 5) + (5 / 5)
+        /// 12 = 55 / 5 + 5 / 5
+        /// 12 = (55 + 5) / 5
+        /// 
+        /// 5를 사용한 횟수는 각각 6,5,4 입니다. 그리고 이중 가장 작은 경우는 4입니다.
         /// </summary>
         /// <param name="N"> N은 1 이상 9 이하입니다. </param>
         /// <param name="number"> number는 1 이상 32,000 이하입니다. </param>

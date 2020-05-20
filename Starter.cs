@@ -58,8 +58,16 @@ namespace Algorithm
             //Console.WriteLine(EquationN.Solution(5,24));
             //Console.WriteLine(EquationN.Solution(2,11));
 
-            Console.WriteLine(Tiles.Solution(5));
-            Console.WriteLine(Tiles.Solution(6));
+            //Console.WriteLine(Tiles.Solution(5));
+            //Console.WriteLine(Tiles.Solution(6));
+
+
+            //Console.WriteLine(TargetNumber.Solution(new int[] { 1, 1, 1, 1, 1 } , 3));
+
+            Console.WriteLine(Network.solution(3 , new int[,] { { 1, 1, 0, }, { 1, 1, 0 }, { 0, 0, 1 } }));
+            Console.WriteLine(Network.solution(3 , new int[,] { { 1, 1, 0, }, { 1, 1, 1 }, { 0, 1, 1 } }));
+
+
         }
 
         static string ArrayToString<T>(this T[] array)

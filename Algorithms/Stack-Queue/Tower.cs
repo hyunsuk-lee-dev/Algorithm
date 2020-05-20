@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace Algorithm
 {
+    /// <summary>
+    /// https://programmers.co.kr/learn/courses/30/lessons/42588
+    /// Stack/Queue
+    /// </summary>
     public class Tower
     {
         public static int[] Solution(int[] heights)
