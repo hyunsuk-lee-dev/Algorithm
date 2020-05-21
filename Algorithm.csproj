@@ -63,23 +63,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Algorithms\BiggerNumberGame.cs" />
-    <Compile Include="Algorithms\Cookie.cs" />
-    <Compile Include="Algorithms\DigitSum.cs" />
-    <Compile Include="Algorithms\Direction.cs" />
-    <Compile Include="Algorithms\DirectionSimulation.cs" />
-    <Compile Include="Algorithms\PermutationCheck.cs" />
-    <Compile Include="Algorithms\RemainderPoint.cs" />
-    <Compile Include="Algorithms\Sticker.cs" />
-    <Compile Include="Algorithms\Tournament.cs" />
-    <Compile Include="Algorithms\Tower.cs" />
-    <Compile Include="Algorithms\WordPuzzle.cs" />
-    <Compile Include="Algorithms\EquationN.cs" />
-    <Compile Include="Network.cs" />
+    <Compile Include="Algorithms\DFS-BFS\TravelRoute.cs" />
+    <Compile Include="Algorithms\DFS-BFS\WordChanger.cs" />
+    <Compile Include="Algorithms\Uncategorized\BiggerNumberGame.cs" />
+    <Compile Include="Algorithms\Uncategorized\Cookie.cs" />
+    <Compile Include="Algorithms\Uncategorized\DigitSum.cs" />
+    <Compile Include="Algorithms\Uncategorized\Direction.cs" />
+    <Compile Include="Miscellaneous\DirectionSimulation.cs" />
+    <Compile Include="Algorithms\Uncategorized\PermutationCheck.cs" />
+    <Compile Include="Algorithms\Uncategorized\RemainderPoint.cs" />
+    <Compile Include="Algorithms\DP\Sticker.cs" />
+    <Compile Include="Algorithms\Uncategorized\Tournament.cs" />
+    <Compile Include="Algorithms\Stack-Queue\Tower.cs" />
+    <Compile Include="Algorithms\DP\WordPuzzle.cs" />
+    <Compile Include="Algorithms\DP\EquationN.cs" />
+    <Compile Include="Algorithms\DFS-BFS\Network.cs" />
     <Compile Include="Starter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Algorithms\Tiles.cs" />
-    <Compile Include="TargetNumber.cs" />
+    <Compile Include="Algorithms\DP\Tiles.cs" />
+    <Compile Include="Algorithms\DFS-BFS\TargetNumber.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

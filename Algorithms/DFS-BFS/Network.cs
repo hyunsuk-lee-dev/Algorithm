@@ -21,7 +21,7 @@ namespace Algorithm
         /// <param name="n">컴퓨터의 개수</param>
         /// <param name="computers">연결에 대한 정보가 담긴 2차원 배열</param>
         /// <returns>네트워크의 개수</returns>
-        public static int solution(int n, int[,] computers)
+        public static int Solution(int n, int[,] computers)
         {
             int answer = 0;
             bool[] networks = new bool[n];

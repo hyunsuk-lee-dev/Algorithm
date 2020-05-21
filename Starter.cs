@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Algorithm.Algorithms.DFS_BFS;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -64,27 +65,43 @@ namespace Algorithm
 
             //Console.WriteLine(TargetNumber.Solution(new int[] { 1, 1, 1, 1, 1 } , 3));
 
-            Console.WriteLine(Network.solution(3 , new int[,] { { 1, 1, 0, }, { 1, 1, 0 }, { 0, 0, 1 } }));
-            Console.WriteLine(Network.solution(3 , new int[,] { { 1, 1, 0, }, { 1, 1, 1 }, { 0, 1, 1 } }));
 
+            //Console.WriteLine(Network.solution(3 , new int[,] { { 1, 1, 0, }, { 1, 1, 0 }, { 0, 0, 1 } }));
+            //Console.WriteLine(Network.solution(3 , new int[,] { { 1, 1, 0, }, { 1, 1, 1 }, { 0, 1, 1 } }));
+
+
+            //Console.WriteLine(WordChanger.Solution("hit", "cog", new string[] { "hot", "dot", "dog", "lot", "log", "cog" }));
+            //Console.WriteLine(WordChanger.Solution("hit", "cog", new string[] { "hot", "dot", "dog", "lot", "log" }));
+
+
+            Console.WriteLine(TravelRoute.Solution(
+                new string[,] { { "ICN", "JFK" }, { "HND", "IAD" }, { "JFK", "HND" } }, "ICN"
+                ).ArrayToString());
+            Console.WriteLine(TravelRoute.Solution(
+                new string[,] { { "ICN", "SFO" }, { "ICN", "ATL" }, { "SFO", "ATL" }, { "ATL", "ICN" }, { "ATL", "SFO" } }, "ICN"
+                ).ArrayToString());
 
         }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "<Pending>")]
         static string ArrayToString<T>(this T[] array)
         {
             string mergedString = "[";
 
-            foreach(T item in array)
+            for(int i = 0 ; i < array.Length ; i++)
             {
-                if(!array.Last().Equals(item))
-                    mergedString += $"{item.ToString()}, ";
+                if(i == array.Length - 1)
+                    mergedString += $"{array[i]}";
                 else
-                    mergedString += $"{item.ToString()}]";
+                    mergedString += $"{array[i]}, ";
             }
+
+            mergedString += "]";
 
             return mergedString;
         }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "<Pending>")]
         static T[] StringToArray<T>(this string target)
         {
             target = target.Replace("[", "");
