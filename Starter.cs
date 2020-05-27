@@ -1,4 +1,5 @@
-﻿using Algorithm.Algorithms.DFS_BFS;
+﻿using Algorithm.Algorithms;
+using Algorithm.Functions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -74,49 +75,19 @@ namespace Algorithm
             //Console.WriteLine(WordChanger.Solution("hit", "cog", new string[] { "hot", "dot", "dog", "lot", "log" }));
 
 
-            Console.WriteLine(TravelRoute.Solution(
-                new string[,] { { "ICN", "JFK" }, { "HND", "IAD" }, { "JFK", "HND" } }, "ICN"
-                ).ArrayToString());
-            Console.WriteLine(TravelRoute.Solution(
-                new string[,] { { "ICN", "SFO" }, { "ICN", "ATL" }, { "SFO", "ATL" }, { "ATL", "ICN" }, { "ATL", "SFO" } }, "ICN"
-                ).ArrayToString());
+            //Console.WriteLine(TravelRoute.Solution(
+            //    new string[,] { { "ICN", "JFK" }, { "HND", "IAD" }, { "JFK", "HND" } }).ArrayToString());
+            //Console.WriteLine(TravelRoute.Solution(
+            //    new string[,] { { "ICN", "SFO" }, { "ICN", "ATL" }, { "SFO", "ATL" }, { "ATL", "ICN" }, { "ATL", "SFO" } }).ArrayToString());
 
+
+            // Console.WriteLine(NumberBaseball.Solution(new int[,] { { 123, 1, 1 }, { 356, 1, 0 }, { 327, 2, 0 }, { 489, 0, 1 } }));
+
+
+            Console.WriteLine(BestAlbum.Solution(
+                new string[] { "classic", "pop", "classic", "classic", "pop" , "rock"},
+                new int[] { 500, 600, 150, 800, 2500 , 50000 })
+                .ArrayToString());
         }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "<Pending>")]
-        static string ArrayToString<T>(this T[] array)
-        {
-            string mergedString = "[";
-
-            for(int i = 0 ; i < array.Length ; i++)
-            {
-                if(i == array.Length - 1)
-                    mergedString += $"{array[i]}";
-                else
-                    mergedString += $"{array[i]}, ";
-            }
-
-            mergedString += "]";
-
-            return mergedString;
-        }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "<Pending>")]
-        static T[] StringToArray<T>(this string target)
-        {
-            target = target.Replace("[", "");
-            target = target.Replace("]", "");
-            string[] splitString = target.Split(',');
-
-            T[] convertedArray = new T[splitString.Length];
-
-            for(int i = 0 ; i < convertedArray.Length ; i++)
-            {
-                convertedArray[i] = (T)Convert.ChangeType(splitString[i], typeof(T));
-            }
-
-            return convertedArray;
-        }
-
     }
 }

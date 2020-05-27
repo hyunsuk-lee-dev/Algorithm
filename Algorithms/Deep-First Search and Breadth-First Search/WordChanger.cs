@@ -5,7 +5,7 @@ using System.Net.Mime;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Algorithm.Algorithms.DFS_BFS
+namespace Algorithm.Algorithms
 {
     /// <summary>
     /// https://programmers.co.kr/learn/courses/30/lessons/43163

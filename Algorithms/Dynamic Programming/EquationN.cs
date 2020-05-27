@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Algorithm
+namespace Algorithm.Algorithms
 {
     /// <summary>
     /// https://programmers.co.kr/learn/courses/30/lessons/42895
