@@ -2,6 +2,7 @@
 using Algorithm.Functions;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
@@ -12,8 +13,12 @@ namespace Algorithm
 {
     static class Starter
     {
+
+        static Stopwatch stopwatch = new Stopwatch();
+        static long elapsedTime = 0;
         static void Main(string[] args)
         {
+            stopwatch.Start();
 
             //Console.WriteLine((Tower.Solution(new int[] { 6, 9, 5, 7, 4 })).ArrayToString());
             //Console.WriteLine((Tower.Solution(new int[] { 3, 9, 9, 3, 5, 7, 2 })).ArrayToString());
@@ -84,10 +89,34 @@ namespace Algorithm
             // Console.WriteLine(NumberBaseball.Solution(new int[,] { { 123, 1, 1 }, { 356, 1, 0 }, { 327, 2, 0 }, { 489, 0, 1 } }));
 
 
-            Console.WriteLine(BestAlbum.Solution(
-                new string[] { "classic", "pop", "classic", "classic", "pop" , "rock"},
-                new int[] { 500, 600, 150, 800, 2500 , 50000 })
-                .ArrayToString());
+            //Console.WriteLine(BestAlbum.Solution(
+            //    new string[] { "classic", "pop", "classic", "classic", "pop" , "rock"},
+            //    new int[] { 500, 600, 150, 800, 2500 , 50000 })
+            //    .ArrayToString());
+
+
+            //Console.WriteLine(IntegerTriangle.Solution(new List<List<int>>{new List<int>{ 7 }, new List<int> { 3, 8 },
+            //    new List<int> { 8, 1, 0 }, new List<int>{ 2, 7, 4, 4 }, new List<int>{ 4, 5, 2, 6, 5 } }));
+
+
+            //Show(TruckBridge.Solution(2, 10, new int[] { 7, 4, 5, 6 }));
+            //Show(TruckBridge.Solution(100, 100, new int[] { 10 }));
+            //Show(TruckBridge.Solution(100, 100, new int[] { 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 }));
+            //Show(TruckBridge.Solution(9000, 101, new int[] { 101, 101, 101, 101, 101, 101, 101, 101 }));
+
+
+            //Show(Developement.Solution(new int[] { 93, 30, 55 }, new int[] { 1, 30, 5 }).ArrayToString());
+
+
+            Show(PipeCutting.Solution("()(((()())(())()))(())"));
+        }
+
+        static void Show(object solution)
+        {
+            Console.WriteLine(solution);
+            Console.WriteLine($"Duration : {stopwatch.ElapsedMilliseconds - elapsedTime}ms");
+            elapsedTime = stopwatch.ElapsedMilliseconds;
+            Console.WriteLine();
         }
     }
 }
