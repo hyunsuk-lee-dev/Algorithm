@@ -20,6 +20,7 @@ namespace Algorithm
         {
             stopwatch.Start();
 
+            #region Older Code
             //Console.WriteLine((Tower.Solution(new int[] { 6, 9, 5, 7, 4 })).ArrayToString());
             //Console.WriteLine((Tower.Solution(new int[] { 3, 9, 9, 3, 5, 7, 2 })).ArrayToString());
             //Console.WriteLine((Tower.Solution(new int[] { 1, 5, 3, 6, 7, 6, 5 })).ArrayToString());
@@ -108,7 +109,15 @@ namespace Algorithm
             //Show(Developement.Solution(new int[] { 93, 30, 55 }, new int[] { 1, 30, 5 }).ArrayToString());
 
 
-            Show(PipeCutting.Solution("()(((()())(())()))(())"));
+            //Show(PipeCutting.Solution("()(((()())(())()))(())"));
+
+
+            //Show(PrinterQueue.Solution(new int[] { 2, 1, 3, 2 }, 2));
+            //Show(PrinterQueue.Solution(new int[] { 1, 1, 9, 1, 1, 1 }, 0));
+            #endregion
+
+            Show(StockPrice.Solution(new int[] { 1, 2, 3, 2, 3 }).ArrayToString());
+
         }
 
         static void Show(object solution)
