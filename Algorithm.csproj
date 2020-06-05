@@ -68,6 +68,9 @@
     <Compile Include="Algorithms\Brute Force\NumberBaseball.cs" />
     <Compile Include="Algorithms\Dynamic Programming\IntegerTriangle.cs" />
     <Compile Include="Algorithms\Hash\BestAlbum.cs" />
+    <Compile Include="Algorithms\Heap\Heap.cs" />
+    <Compile Include="Algorithms\Heap\NoodleFactory.cs" />
+    <Compile Include="Algorithms\Heap\SpicyFood.cs" />
     <Compile Include="Algorithms\Stack and Queue\Developement.cs" />
     <Compile Include="Algorithms\Stack and Queue\PipeCutting.cs" />
     <Compile Include="Algorithms\Stack and Queue\PrinterQueue.cs" />

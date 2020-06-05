@@ -1,5 +1,6 @@
 ﻿using Algorithm.Algorithms;
 using Algorithm.Functions;
+
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -116,8 +117,17 @@ namespace Algorithm
             //Show(PrinterQueue.Solution(new int[] { 1, 1, 9, 1, 1, 1 }, 0));
             #endregion
 
-            Show(StockPrice.Solution(new int[] { 1, 2, 3, 2, 3 }).ArrayToString());
+            //Show(StockPrice.Solution(new int[] { 1, 2, 3, 2, 3 }).ArrayToString());            
+            //Show(StockPrice.Solution(new int[] { 1, 4, 2, 5, 6, 7, 4, 5 }).ArrayToString());
+            //Show(StockPrice.Solution(new int[] { 1, 2, 3, 4, 5, 1, 1 }).ArrayToString());
+            //Show(StockPrice.Solution(new int[] { 1, 2, 3, 2, 3, 1 }).ArrayToString());
 
+
+            //Show(SpicyFood.Solution(new int[] { 1, 2, 3, 9, 10, 12 }, 7));
+
+
+            Show(NoodleFactory.Solution(4, new int[] { 4, 10, 15 }, new int[] { 20, 5, 10 }, 30));
+            //2
         }
 
         static void Show(object solution)

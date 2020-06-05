@@ -10,7 +10,7 @@ namespace Algorithm.Algorithms
     /// https://programmers.co.kr/learn/courses/30/lessons/42584
     /// Stack and Queue
     /// </summary>
-    public static class StockPrice
+    public class StockPrice
     {
         /// <summary>
         /// 
@@ -19,18 +19,28 @@ namespace Algorithm.Algorithms
         /// <returns>가격이 떨어지지 않은 기간은 몇 초인지</returns>
         public static int[] Solution(int[] prices)
         {
-            int[] answer = new int[prices.Length];
+            int[] answers = new int[prices.Length];
+
+            Stack<int> times = new Stack<int>();
 
             for(int i = 0 ; i < prices.Length ; i++)
             {
-                for(int j = 0 ; j < i ; j++)
+                while(times.Count > 0 && prices[i] < prices[times.Peek()])
                 {
-                    answer[j]++;
+                    answers[times.Peek()] = i - times.Peek();
+                    times.Pop();
                 }
-                    
+
+                times.Push(i);
             }
 
-            return answer;
+            for(int i = answers.Length - 1 ; i >= 0 ; i--)
+            {
+                if(answers[i] <= 0)
+                    answers[i] = prices.Length - 1 - times.Pop();
+            }
+
+            return answers;
         }
     }
 }
