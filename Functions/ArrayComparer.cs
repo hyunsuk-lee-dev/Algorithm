@@ -6,16 +6,23 @@ using System.Threading.Tasks;
 
 namespace Algorithm.Functions
 {
-    public class StringArrayComparer : IComparer<string[]>
+
+    public enum CompareType
+    {
+        Ascending,
+        Descending
+    }
+
+    public class ArrayComparer<T> : IComparer<T[]> where T : IComparable
     {
         public int index;
 
-        public StringArrayComparer(int index)
+        public ArrayComparer(int index)
         {
             this.index = index;
         }
 
-        public int Compare(string[] x, string[] y)
+        public int Compare(T[] x, T[] y)
         {
             if(x.Length > index && y.Length > index)
                 return x[index].CompareTo(y[index]);

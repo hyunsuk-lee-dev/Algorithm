@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Algorithm.Algorithms.Heap;
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +14,7 @@ namespace Algorithm.Algorithms
     /// </summary>
     public class NoodleFactory
     {
-        /// <summary>
+        /// <summary>5
         /// 라면 공장에서는 하루에 밀가루를 1톤씩 사용합니다. 
         /// 원래 밀가루를 공급받던 공장의 고장으로 앞으로 k일 이후에야 밀가루를 공급받을 수 있기 때문에 해외 공장에서 밀가루를 수입해야 합니다.
         /// 
@@ -39,7 +41,28 @@ namespace Algorithm.Algorithms
         {
             int answer = 0;
 
+            int wheat = stock;
+            int date = 1;
+            int supplyIndex = 0;
 
+            Heap<int> availableSupply = new Heap<int>(HeapType.Max);
+
+            while(date < k)
+            {
+                if(supplyIndex < dates.Length && dates[supplyIndex] == date)
+                {
+                    availableSupply.Add(supplies[supplyIndex++]);
+                }
+
+                wheat--;
+                date++;
+
+                if(wheat == 0)
+                {
+                    wheat += availableSupply.Remove();
+                    answer++;
+                }
+            }
 
             return answer;
         }

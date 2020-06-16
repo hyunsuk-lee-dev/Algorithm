@@ -126,8 +126,11 @@ namespace Algorithm
             //Show(SpicyFood.Solution(new int[] { 1, 2, 3, 9, 10, 12 }, 7));
 
 
-            Show(NoodleFactory.Solution(4, new int[] { 4, 10, 15 }, new int[] { 20, 5, 10 }, 30));
-            //2
+            //Show(NoodleFactory.Solution(4, new int[] { 4, 10, 15 }, new int[] { 20, 5, 10 }, 30));
+            //Show(NoodleFactory.Solution(31, new int[] { 4, 10, 15 }, new int[] { 20, 5, 10 }, 30));
+
+
+            Show(DiscController.Solution(new int[,] { { 0, 3 }, { 1, 9 }, { 2, 6 } }));
         }
 
         static void Show(object solution)

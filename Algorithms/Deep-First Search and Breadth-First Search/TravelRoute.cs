@@ -1,4 +1,5 @@
 ﻿using Algorithm.Functions;
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -30,9 +31,8 @@ namespace Algorithm.Algorithms
         {
             List<string[]> ticketList = tickets.Convert2DArrayToList();
 
-            StringArrayComparer stringArrayComparer = new StringArrayComparer(1);
+            ArrayComparer<string> stringArrayComparer = new ArrayComparer<string>(1);
             ticketList.Sort(stringArrayComparer);
-
 
             Tuple<bool, List<string>> result = TryTravelRoute(ticketList, "ICN");
 
@@ -56,7 +56,7 @@ namespace Algorithm.Algorithms
             }
 
 
-            for(int i = 0 ; i < ticketList.Count ;i++)
+            for(int i = 0 ; i < ticketList.Count ; i++)
             {
                 string[] ticket = ticketList[i];
 
@@ -71,7 +71,7 @@ namespace Algorithm.Algorithms
                         cities.AddRange(result.Item2);
                         return new Tuple<bool, List<string>>(true, cities);
                     }
-                        
+
                 }
             }
 
@@ -79,5 +79,5 @@ namespace Algorithm.Algorithms
         }
     }
 
-    
+
 }
