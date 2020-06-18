@@ -63,12 +63,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithms\Brute Force\Carpet.cs" />
     <Compile Include="Algorithms\Deep-First Search and Breadth-First Search\TravelRoute.cs" />
     <Compile Include="Algorithms\Deep-First Search and Breadth-First Search\WordChanger.cs" />
     <Compile Include="Algorithms\Brute Force\NumberBaseball.cs" />
     <Compile Include="Algorithms\Dynamic Programming\IntegerTriangle.cs" />
     <Compile Include="Algorithms\Hash\BestAlbum.cs" />
     <Compile Include="Algorithms\Heap\DiscController.cs" />
+    <Compile Include="Algorithms\Heap\DoublePriorityQueue.cs" />
     <Compile Include="Algorithms\Heap\Heap.cs" />
     <Compile Include="Algorithms\Heap\NoodleFactory.cs" />
     <Compile Include="Algorithms\Heap\SpicyFood.cs" />

@@ -1,4 +1,6 @@
 ﻿using Algorithm.Algorithms;
+using Algorithm.Algorithms.Brute_Force;
+using Algorithm.Algorithms.Heap;
 using Algorithm.Functions;
 
 using System;
@@ -130,7 +132,17 @@ namespace Algorithm
             //Show(NoodleFactory.Solution(31, new int[] { 4, 10, 15 }, new int[] { 20, 5, 10 }, 30));
 
 
-            Show(DiscController.Solution(new int[,] { { 0, 3 }, { 1, 9 }, { 2, 6 } }));
+            //Show(DiscController.Solution(new int[,] { { 0, 3 }, { 1, 9 }, { 2, 6 } }));
+
+
+            //Show(DoublePriorityQueue.Solution(new string[] { "I 16", "D 1" }).ArrayToString());
+            ////[0,0]
+            //Show(DoublePriorityQueue.Solution(new string[] { "I 7", "I 5", "I -5", "D -1" }).ArrayToString());
+            ////[7,5]
+
+            //Show(Carpet.solution(24, 24).ArrayToString());
+            //Show(Carpet.solution(10, 2).ArrayToString());
+           
         }
 
         static void Show(object solution)

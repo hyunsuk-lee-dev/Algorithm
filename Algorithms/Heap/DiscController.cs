@@ -50,37 +50,36 @@ namespace Algorithm.Algorithms
         public static int Solution(int[,] jobs)
         {
             List<int[]> jobList = jobs.Convert2DArrayToList();
+
             jobList.Sort((j1, j2) => j1[0].CompareTo(j2[0]));
 
-            Heap<int> jobQueue = new Heap<int>(HeapType.Min);
+            HeapComparison<int[]> jobQueue = new HeapComparison<int[]>(HeapType.Min, (j1, j2) => j1[1].CompareTo(j2[1]));
 
-            int time = jobList[0][0];
-            int currentJobIndex = 0;
-            int jobIndex = 1;
+            int time = 0;
+            int jobIndex = 0;
+            int jobCount = 0;
 
             int delay = 0;
-            
-            while(jobIndex < jobList.Count || jobQueue.Count > 0)
+
+            while(jobCount < jobList.Count)
             {
-                if(jobList[jobIndex][1] == time)
+                while(jobIndex < jobList.Count && jobList[jobIndex][0] <= time)
+                    jobQueue.Add(jobList[jobIndex++]);
+
+                if(jobQueue.Count <= 0)
                 {
-                    jobQueue.Add(jobList[jobIndex++][1]);
+                    time = jobList[jobIndex][0];
                 }
-
-                time++;
-
-                if(jobList[currentJobIndex][0] + jobList[currentJobIndex][1] >= time)
+                else
                 {
-                    jobQueue.Remove();
+                    int[] nowJob = jobQueue.Remove();
+                    delay += time - nowJob[0] + nowJob[1];
+                    time += nowJob[1];
+                    jobCount++;
                 }
             }
 
-            return delay / jobs.GetLength(0);
-        }
-
-        class Job
-        {
-
+            return delay / jobList.Count;
         }
     }
 }
