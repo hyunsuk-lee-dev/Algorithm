@@ -64,10 +64,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Algorithms\Brute Force\Carpet.cs" />
+    <Compile Include="Algorithms\Brute Force\MockExam.cs" />
     <Compile Include="Algorithms\Deep-First Search and Breadth-First Search\TravelRoute.cs" />
     <Compile Include="Algorithms\Deep-First Search and Breadth-First Search\WordChanger.cs" />
     <Compile Include="Algorithms\Brute Force\NumberBaseball.cs" />
+    <Compile Include="Algorithms\Dynamic Programming\CardGame.cs" />
+    <Compile Include="Algorithms\Dynamic Programming\TravelFundRaising.cs" />
     <Compile Include="Algorithms\Dynamic Programming\IntegerTriangle.cs" />
+    <Compile Include="Algorithms\Dynamic Programming\SchoolRoad.cs" />
+    <Compile Include="Algorithms\Dynamic Programming\Thievery.cs" />
+    <Compile Include="Algorithms\Greedy\BigNumber.cs" />
+    <Compile Include="Algorithms\Greedy\GymSuit.cs" />
     <Compile Include="Algorithms\Hash\BestAlbum.cs" />
     <Compile Include="Algorithms\Heap\DiscController.cs" />
     <Compile Include="Algorithms\Heap\DoublePriorityQueue.cs" />
@@ -83,8 +90,10 @@
     <Compile Include="Algorithms\Uncategorized\Cookie.cs" />
     <Compile Include="Algorithms\Uncategorized\DigitSum.cs" />
     <Compile Include="Algorithms\Uncategorized\Direction.cs" />
+    <Compile Include="Algorithms\Uncategorized\ReceiptError.cs" />
     <Compile Include="Functions\Arrays.cs" />
     <Compile Include="Functions\ArrayComparer.cs" />
+    <Compile Include="Functions\PrimeNumber.cs" />
     <Compile Include="Miscellaneous\DirectionSimulation.cs" />
     <Compile Include="Algorithms\Uncategorized\PermutationCheck.cs" />
     <Compile Include="Algorithms\Uncategorized\RemainderPoint.cs" />
