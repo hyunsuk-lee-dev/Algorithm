@@ -117,7 +117,6 @@ namespace Algorithm
 
             //Show(PrinterQueue.Solution(new int[] { 2, 1, 3, 2 }, 2));
             //Show(PrinterQueue.Solution(new int[] { 1, 1, 9, 1, 1, 1 }, 0));
-            #endregion
 
             //Show(StockPrice.Solution(new int[] { 1, 2, 3, 2, 3 }).ArrayToString());            
             //Show(StockPrice.Solution(new int[] { 1, 4, 2, 5, 6, 7, 4, 5 }).ArrayToString());
@@ -136,15 +135,55 @@ namespace Algorithm
 
 
             //Show(DoublePriorityQueue.Solution(new string[] { "I 16", "D 1" }).ArrayToString());
-            ////[0,0]
             //Show(DoublePriorityQueue.Solution(new string[] { "I 7", "I 5", "I -5", "D -1" }).ArrayToString());
-            ////[7,5]
 
             //Show(Carpet.solution(24, 24).ArrayToString());
             //Show(Carpet.solution(10, 2).ArrayToString());
 
 
-            Show(FindingPrimeNumber.Solution("17"));
+            //Show(FindingPrimeNumber.Solution("17"));
+
+
+            //Show(Carpet.Solution(24, 24).ArrayToString());
+            //Show(Carpet.Solution(10, 2).ArrayToString());
+
+
+            //Show(MockExam.Solution(new int[] { 1, 2, 3, 4, 5 }).ArrayToString());
+            //Show(MockExam.Solution(new int[] { 1, 3, 2, 4, 2 }).ArrayToString());
+
+
+            //Show(SchoolRoad.Solution(4, 3, new int[1][] { new int[2] { 2, 2 } }));
+            //Show(SchoolRoad.Solution(5, 5, new int[8][] { new int[2] { 2, 1 }, new int[2] { 2, 2 }, new int[2] { 2, 3 },
+            //    new int[2] { 2, 4 }, new int[2] { 4, 2 }, new int[2] { 4, 3 }, new int[2] { 4, 4 }, new int[2] { 4, 5 } }));
+
+
+            //Show(CardGame.Solution(new int[] { 3, 2, 5,2,2,2,2,2,2,2,2,2 }, new int[] { 2, 4, 1,3,1,3,1,3,1,3,1,3,1,3,1,3 }));
+            //Show(CardGame.Solution(new int[] { 3, 2, 1 }, new int[] { 2, 4, 1 }));
+
+
+            //Show(Thievery.Solution(new int[] { 1, 2, 3, 1 }));
+            
+
+            //Show(TravelFundRaising.Solution(100, new int[3, 4] { { 1, 1, 1, 1 }, { 99, 1000, 1, 1 }, { 1, 1, 1, 1 } }));
+            //Show(TravelFundRaising.Solution(1650, new int[3, 4] { { 500, 200, 200, 100 }, { 800, 370, 300, 120 }, { 700, 250, 300, 90 } }));
+            //Show(TravelFundRaising.Solution(3000, new int[4, 4] { { 1000, 2000, 300, 700 }, { 1100, 1900, 400, 900 },
+            //    { 900, 1800, 400, 700 }, { 1200, 2300, 500, 1200 } }));
+
+
+            //Show(GymSuit.Solution(5, new int[] { 2, 4 }, new int[] { 1, 3, 5 }));
+            //Show(GymSuit.Solution(5, new int[] { 2, 4 }, new int[] { 3 }));
+            //Show(GymSuit.Solution(3, new int[] { 3 }, new int[] { 1 }));
+            //Show(GymSuit.Solution(8, new int[] { 3, 7 }, new int[] { 2, 4 }));
+            #endregion
+            /*
+            1924	    2	94
+            1231234	    3	3234
+            4177252841	4	775841
+            */
+
+            Show(BigNumber.Solution("1924", 2));
+            Show(BigNumber.Solution("1231234", 3));
+            Show(BigNumber.Solution("41713333333333333333333333724512312322223232645645645645652841", 10));
         }
 
         static void Show(object solution)

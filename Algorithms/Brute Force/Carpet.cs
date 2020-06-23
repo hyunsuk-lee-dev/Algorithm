@@ -26,7 +26,7 @@ namespace Algorithm.Algorithms.Brute_Force
         /// <param name="brown">갈색 격자의 수</param>
         /// <param name="yellow">노란색 격자의 수</param>
         /// <returns>가로, 세로 크기</returns>
-        public static int[] solution(int brown, int yellow)
+        public static int[] Solution(int brown, int yellow)
         {
             // [1]   x * y = Brown + Yellow
             // [2]   (x - 2) * (y - 2) = Yellow
