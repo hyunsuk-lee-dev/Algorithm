@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,34 +26,40 @@ namespace Algorithm.Algorithms
         /// <returns>number에서 k 개의 수를 제거했을 때 만들 수 있는 수 중 가장 큰 숫자의 문자열</returns>
         public static string Solution(string number, int k)
         {
+            StringBuilder numbers = new StringBuilder(number);
+            int starting = 0;
+
             while(k > 0)
             {
-                int previousNumber = 10;
-                bool isRemoved = false;
-
-                for(int i = 0 ; i < number.Length ; i++)
+                if(number.Length - starting == k)
                 {
-                    int currentNumber = int.Parse(number[i].ToString());
+                    numbers.Remove(starting, k);
+                    break;
+                }
 
-                    if(previousNumber < currentNumber)
+                char max = '/';
+                int maxIndex = -1;
+
+                for(int i = 0 ; i < k + 1 ; i++)
+                {
+                    char nowNumber = numbers[starting + i];
+                    if(max < nowNumber)
                     {
-                        number = number.Remove(i - 1, 1);
-                        k--;
-                        isRemoved = true;
-                        break;
+                        max = nowNumber;
+                        maxIndex = i;
+
+                        if(nowNumber == '9')
+                            break;
                     }
-
-                    previousNumber = currentNumber;
                 }
 
-                if(!isRemoved)
-                {
-                    number = number.Remove(number.Length - 1, 1);
-                    k--;
-                }
+                numbers.Remove(starting, maxIndex);
+
+                k -= maxIndex;
+                starting++;
             }
 
-            return number;
+            return numbers.ToString();
         }
     }
 }

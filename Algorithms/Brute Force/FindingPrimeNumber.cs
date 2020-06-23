@@ -1,4 +1,5 @@
 ﻿using Algorithm.Functions;
+
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -41,17 +42,11 @@ namespace Algorithm.Algorithms
             combinations.Remove(1);
 
             combinations.Sort((x1, x2) => -x1.CompareTo(x2));
-            
-            for(int i = 2 ; i <= combinations[0] ;i++)
-            {
-                for(int j = i * 2 ; j <= combinations[0] ; j += i)
-                {
-                    if(combinations.Contains(j))
-                        combinations.Remove(j);
-                }
-            }
 
-            Console.WriteLine(combinations.ToStrings());
+            for(int i = 2 ; i <= Math.Sqrt(combinations[0]) ; i++)
+            {
+                combinations.RemoveAll(x => x > i && x % i == 0);
+            }
 
             return combinations.Count;
         }

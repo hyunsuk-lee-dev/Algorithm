@@ -10,19 +10,20 @@ namespace Algorithm.Functions
     {
         public static int[] PrimeNumbers(int max)
         {
-            List<int> answers = new List<int>();
+            List<int> numbers = new List<int>();
 
-            for(int i = 0 ; i < max ; i++)
-                answers.Add(i + 1);
+            for(int i = 2 ; i <= max ; i++)
+                numbers.Add(i);
 
-            answers.Remove(1);
+            int numberIndex = 0;
 
-            for(int i = 2 ; i < Math.Sqrt(max) ; i++)
+            while(numbers[numberIndex] <= Math.Sqrt(max))
             {
-
+                int number = numbers[numberIndex++];
+                numbers.RemoveAll(x => x > number && x % number == 0);
             }
 
-            return answers.ToArray();
+            return numbers.ToArray();
         }
     }
 }

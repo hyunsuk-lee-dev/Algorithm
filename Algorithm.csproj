@@ -76,6 +76,8 @@
     <Compile Include="Algorithms\Dynamic Programming\Thievery.cs" />
     <Compile Include="Algorithms\Greedy\BigNumber.cs" />
     <Compile Include="Algorithms\Greedy\GymSuit.cs" />
+    <Compile Include="Algorithms\Greedy\JoyStick.cs" />
+    <Compile Include="Algorithms\Greedy\LifeBoat.cs" />
     <Compile Include="Algorithms\Hash\BestAlbum.cs" />
     <Compile Include="Algorithms\Heap\DiscController.cs" />
     <Compile Include="Algorithms\Heap\DoublePriorityQueue.cs" />
