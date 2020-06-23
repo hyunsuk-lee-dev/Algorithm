@@ -37,16 +37,16 @@ namespace Algorithm.Functions
             return result;
         }
 
-        public static string ArrayToString<T>(this T[] array)
+        public static string ToStrings<T>(this IEnumerable<T> enumerable)
         {
             string mergedString = "[";
 
-            for(int i = 0 ; i < array.Length ; i++)
+            for(int i = 0 ; i < enumerable.Count() ; i++)
             {
-                if(i == array.Length - 1)
-                    mergedString += $"{array[i]}";
+                if(i == enumerable.Count() - 1)
+                    mergedString += $"{enumerable.ElementAt(i)}";
                 else
-                    mergedString += $"{array[i]}, ";
+                    mergedString += $"{enumerable.ElementAt(i)}, ";
             }
 
             mergedString += "]";

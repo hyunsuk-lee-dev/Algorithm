@@ -142,7 +142,9 @@ namespace Algorithm
 
             //Show(Carpet.solution(24, 24).ArrayToString());
             //Show(Carpet.solution(10, 2).ArrayToString());
-           
+
+
+            Show(FindingPrimeNumber.Solution("17"));
         }
 
         static void Show(object solution)

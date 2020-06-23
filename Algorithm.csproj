@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Algorithms\Brute Force\Carpet.cs" />
+    <Compile Include="Algorithms\Brute Force\FindingPrimeNumber.cs" />
     <Compile Include="Algorithms\Deep-First Search and Breadth-First Search\TravelRoute.cs" />
     <Compile Include="Algorithms\Deep-First Search and Breadth-First Search\WordChanger.cs" />
     <Compile Include="Algorithms\Brute Force\NumberBaseball.cs" />
