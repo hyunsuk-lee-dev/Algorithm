@@ -49,7 +49,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Algorithm.Starter</StartupObject>
+    <StartupObject>Algorithm.MainClass</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -74,10 +74,13 @@
     <Compile Include="Algorithms\Dynamic Programming\IntegerTriangle.cs" />
     <Compile Include="Algorithms\Dynamic Programming\SchoolRoad.cs" />
     <Compile Include="Algorithms\Dynamic Programming\Thievery.cs" />
+    <Compile Include="Algorithms\Greedy\BalancingScale.cs" />
     <Compile Include="Algorithms\Greedy\BigNumber.cs" />
     <Compile Include="Algorithms\Greedy\GymSuit.cs" />
+    <Compile Include="Algorithms\Greedy\IslandConnection.cs" />
     <Compile Include="Algorithms\Greedy\JoyStick.cs" />
     <Compile Include="Algorithms\Greedy\LifeBoat.cs" />
+    <Compile Include="Algorithms\Greedy\PoliceCamera.cs" />
     <Compile Include="Algorithms\Hash\BestAlbum.cs" />
     <Compile Include="Algorithms\Heap\DiscController.cs" />
     <Compile Include="Algorithms\Heap\DoublePriorityQueue.cs" />
@@ -106,7 +109,7 @@
     <Compile Include="Algorithms\Dynamic Programming\WordPuzzle.cs" />
     <Compile Include="Algorithms\Dynamic Programming\EquationN.cs" />
     <Compile Include="Algorithms\Deep-First Search and Breadth-First Search\Network.cs" />
-    <Compile Include="Starter.cs" />
+    <Compile Include="MainClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Algorithms\Dynamic Programming\Tiles.cs" />
     <Compile Include="Algorithms\Deep-First Search and Breadth-First Search\TargetNumber.cs" />

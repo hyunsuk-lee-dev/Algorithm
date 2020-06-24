@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -32,18 +33,25 @@ namespace Algorithm.Algorithms
             int answer = 0;
 
             List<int> peopleList = new List<int>(people);
+            peopleList.Sort();
 
-            while(peopleList.Count > 0)
+            int peopleCount = peopleList.Count;
+
+            int heavyPeopleIndex = peopleCount - 1;
+            int lightPeopleIndex = 0;
+
+            while(peopleCount > 0)
             {
-                int weightSum = peopleList.Min();
+                int weightSum = peopleList[heavyPeopleIndex];
+                heavyPeopleIndex--;
+                peopleCount--;
 
-                peopleList.Remove(peopleList.Min());
-
-                IEnumerable<int> availablePeople = peopleList.Where(x => x + weightSum <= limit);
-
-                if(availablePeople.Count() > 0)
-                    peopleList.Remove(availablePeople.Max());
-
+                if(peopleList[lightPeopleIndex] + weightSum <= limit)
+                {
+                    lightPeopleIndex++;
+                    peopleCount--;
+                }
+                    
                 answer++;
             }
 

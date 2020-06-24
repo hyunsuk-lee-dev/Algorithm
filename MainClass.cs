@@ -14,9 +14,8 @@ using System.Threading.Tasks;
 
 namespace Algorithm
 {
-    static class Starter
+    static class MainClass
     {
-
         static Stopwatch stopwatch = new Stopwatch();
         static long elapsedTime = 0;
         static void Main(string[] args)
@@ -181,11 +180,24 @@ namespace Algorithm
             Show(BigNumber.Solution("1231234", 3));
             Show(BigNumber.Solution("4177252841", 4));
             */
+
+
+
+            //Show(LifeBoat.Solution(new int[] { 70, 50, 80, 50, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 }, 100));
+            //Show(LifeBoat.Solution(new int[] { 70, 80, 50 }, 100));
+
+            //Show(PoliceCamera.Solution(new int[4, 2] { { -20, -20 }, { -14, -5 }, { -18, -13 }, { -5, -3 } }));
+
+            //n	    costs	                                    return
+            //4     [[0, 1, 1],[0,2,2],[1,2,5],[1,3,1],[2,3,8]]	4
+
+            //Show(IslandConnection.Solution(4, new int[5, 3] { { 0, 1, 1 }, { 0, 2, 2 }, { 1, 2, 5 }, { 1, 3, 1 }, { 2, 3, 8 } }));
+
+            //Show(BalancingScale.Solution(new int[] { 3, 1, 6, 2, 7, 30, 1 }));
+
             #endregion
 
 
-            Show(LifeBoat.Solution(new int[] { 70, 50, 80, 50 }, 100));
-            Show(LifeBoat.Solution(new int[] { 70, 80, 50 }, 100));
         }
 
         static void Show(object solution)
