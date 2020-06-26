@@ -179,25 +179,53 @@ namespace Algorithm
             Show(BigNumber.Solution("1924", 2));
             Show(BigNumber.Solution("1231234", 3));
             Show(BigNumber.Solution("4177252841", 4));
-            */
+            
+            Show(LifeBoat.Solution(new int[] { 70, 50, 80, 50, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 }, 100));
+            Show(LifeBoat.Solution(new int[] { 70, 80, 50 }, 100));
+
+            Show(PoliceCamera.Solution(new int[4, 2] { { -20, -20 }, { -14, -5 }, { -18, -13 }, { -5, -3 } }));
+
+            Show(IslandConnection.Solution(4, new int[5, 3] { { 0, 1, 1 }, { 0, 2, 2 }, { 1, 2, 5 }, { 1, 3, 1 }, { 2, 3, 8 } }));
+
+            Show(BalancingScale.Solution(new int[] { 3, 1, 6, 2, 7, 30, 1 }));
+
+            
+            Show(KthNumber.Solution("[1, 5, 2, 6, 3, 7, 4]".ToArrays<int>(), new int[3, 3] { { 2, 5, 3 }, { 4, 4, 1 }, { 1, 7, 3 } }).ToStrings());
+
+            Show(BiggestNumber.Solution("[6,10,2]".ToArrays<int>()));
+            Show(BiggestNumber.Solution("[101,100,10,11,10,10,10,101,100,102]".ToArrays<int>()));
+            Show(BiggestNumber.Solution("[0,0,0,0,0]".ToArrays<int>()));
+
+            Show(H_Index.Solution("[3, 0, 6, 1, 5]".ToArrays<int>()));
+            Show(H_Index.Solution("[3,3,3,3]".ToArrays<int>()));
+
+            Show(PhoneBook.Solution("[119, 97674223, 1195524421]".ToArrays<string>()));
+            Show(PhoneBook.Solution("[123, 456, 789]".ToArrays<string>()));
+            Show(PhoneBook.Solution("[1,98,99]".ToArrays<string>()));
 
 
+            Show(FailureRunner.Solution(
+                "[leo, kiki, eden]".ToArrays<string>(),
+                "[eden, kiki]".ToArrays<string>()));
+            Show(FailureRunner.Solution(
+                "[marina, josipa, nikola, vinko, filipa]".ToArrays<string>(),
+                "[josipa, filipa, marina, nikola]".ToArrays<string>()));
+            Show(FailureRunner.Solution(
+                "[mislav, stanko, mislav, ana]".ToArrays<string>(),
+                "[stanko, ana, mislav]".ToArrays<string>()));
+            
+            Show(Budget.Solution("[120, 110, 140, 150]".ToArrays<int>(), 485));
+            Show(Budget.Solution("[1,2,3,4,5,6,7]".ToArrays<int>(), 20));
+            Show(Budget.Solution("[1,2,3,4]".ToArrays<int>(), 20));
+           
 
-            //Show(LifeBoat.Solution(new int[] { 70, 50, 80, 50, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 }, 100));
-            //Show(LifeBoat.Solution(new int[] { 70, 80, 50 }, 100));
 
-            //Show(PoliceCamera.Solution(new int[4, 2] { { -20, -20 }, { -14, -5 }, { -18, -13 }, { -5, -3 } }));
+            Show(Immigration.Solution(5, new int[] {1,1,10}));
 
-            //n	    costs	                                    return
-            //4     [[0, 1, 1],[0,2,2],[1,2,5],[1,3,1],[2,3,8]]	4
-
-            //Show(IslandConnection.Solution(4, new int[5, 3] { { 0, 1, 1 }, { 0, 2, 2 }, { 1, 2, 5 }, { 1, 3, 1 }, { 2, 3, 8 } }));
-
-            //Show(BalancingScale.Solution(new int[] { 3, 1, 6, 2, 7, 30, 1 }));
-
+             */
             #endregion
 
-
+            Show(SteppingStones.Solution(25, new int[] { 2, 14, 11, 21, 17 }, 2));
         }
 
         static void Show(object solution)

@@ -54,7 +54,7 @@ namespace Algorithm.Functions
             return mergedString;
         }
 
-        public static T[] StringToArray<T>(this string target)
+        public static T[] ToArrays<T>(this string target)
         {
             target = target.Replace("[", "");
             target = target.Replace("]", "");
@@ -64,11 +64,27 @@ namespace Algorithm.Functions
 
             for(int i = 0 ; i < convertedArray.Length ; i++)
             {
-                convertedArray[i] = (T)Convert.ChangeType(splitString[i], typeof(T));
+                convertedArray[i] = (T)Convert.ChangeType(splitString[i].Trim(), typeof(T));
             }
 
             return convertedArray;
         }
+
+        //public static T[,] ToMultiArrays<T>(this string target)
+        //{
+        //    target = target.Replace("[", "");
+        //    target = target.Replace("]", "");
+        //    string[] splitString = target.Split(',');
+
+        //    T[,] convertedArray = new T[splitString.Length];
+
+        //    for(int i = 0 ; i < convertedArray.Length ; i++)
+        //    {
+        //        convertedArray[i] = (T)Convert.ChangeType(splitString[i], typeof(T));
+        //    }
+
+        //    return convertedArray;
+        //}
 
     }
 }

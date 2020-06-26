@@ -63,6 +63,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithms\Binary Search\Budget.cs" />
+    <Compile Include="Algorithms\Binary Search\Immigration.cs" />
+    <Compile Include="Algorithms\Binary Search\SteppingStones.cs" />
     <Compile Include="Algorithms\Brute Force\Carpet.cs" />
     <Compile Include="Algorithms\Brute Force\FindingPrimeNumber.cs" />
     <Compile Include="Algorithms\Brute Force\MockExam.cs" />
@@ -82,11 +85,15 @@
     <Compile Include="Algorithms\Greedy\LifeBoat.cs" />
     <Compile Include="Algorithms\Greedy\PoliceCamera.cs" />
     <Compile Include="Algorithms\Hash\BestAlbum.cs" />
+    <Compile Include="Algorithms\Hash\FailureRunner.cs" />
+    <Compile Include="Algorithms\Hash\PhoneBook.cs" />
     <Compile Include="Algorithms\Heap\DiscController.cs" />
     <Compile Include="Algorithms\Heap\DoublePriorityQueue.cs" />
     <Compile Include="Algorithms\Heap\Heap.cs" />
     <Compile Include="Algorithms\Heap\NoodleFactory.cs" />
     <Compile Include="Algorithms\Heap\SpicyFood.cs" />
+    <Compile Include="Algorithms\Sort\H-Index.cs" />
+    <Compile Include="Algorithms\Sort\KthNumber.cs" />
     <Compile Include="Algorithms\Stack and Queue\Developement.cs" />
     <Compile Include="Algorithms\Stack and Queue\PipeCutting.cs" />
     <Compile Include="Algorithms\Stack and Queue\PrinterQueue.cs" />
@@ -97,6 +104,7 @@
     <Compile Include="Algorithms\Uncategorized\DigitSum.cs" />
     <Compile Include="Algorithms\Uncategorized\Direction.cs" />
     <Compile Include="Algorithms\Uncategorized\ReceiptError.cs" />
+    <Compile Include="Algorithms\Sort\BiggestNumber.cs" />
     <Compile Include="Functions\Arrays.cs" />
     <Compile Include="Functions\ArrayComparer.cs" />
     <Compile Include="Functions\PrimeNumber.cs" />
