@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -54,6 +55,32 @@ namespace Algorithm.Functions
             return mergedString;
         }
 
+        public static string ToMultiStrings<T>(this T[,] multiArray)
+        {
+            string mergedString = "[";
+
+            for(int i = 0 ; i < multiArray.GetLength(0) ; i++)
+            {
+                mergedString += "[";
+                for(int j = 0 ; j < multiArray.GetLength(1) ; j++)
+                {
+                    if(j == multiArray.GetLength(1) - 1)
+                        mergedString += $"{multiArray[i, j]}";
+                    else
+                        mergedString += $"{multiArray[i, j]}, ";
+                }
+
+                if(i == multiArray.GetLength(0) - 1)
+                    mergedString += "]";
+                else
+                    mergedString += "], ";
+            }
+
+            mergedString += "]";
+
+            return mergedString;
+        }
+
         public static T[] ToArrays<T>(this string target)
         {
             target = target.Replace("[", "");
@@ -70,21 +97,23 @@ namespace Algorithm.Functions
             return convertedArray;
         }
 
-        //public static T[,] ToMultiArrays<T>(this string target)
-        //{
-        //    target = target.Replace("[", "");
-        //    target = target.Replace("]", "");
-        //    string[] splitString = target.Split(',');
+        public static T[,] ToMultiArrays<T>(this string target)
+        {
+            string[] splitString = target.TrimParenthesis().Split(new string[] { "]," }, StringSplitOptions.RemoveEmptyEntries);
 
-        //    T[,] convertedArray = new T[splitString.Length];
+            T[,] convertedArray = new T[splitString.Length, splitString[0].Split(',').Length];
 
-        //    for(int i = 0 ; i < convertedArray.Length ; i++)
-        //    {
-        //        convertedArray[i] = (T)Convert.ChangeType(splitString[i], typeof(T));
-        //    }
+            for(int i = 0 ; i < splitString.Length ; i++)
+            {
+                string[] multiSplitString = splitString[i].TrimParenthesis().Split(',');
+                for(int j = 0 ; j < multiSplitString.Length ; j++)
+                    convertedArray[i, j] = (T)Convert.ChangeType(multiSplitString[j], typeof(T));
+            }
 
-        //    return convertedArray;
-        //}
+            return convertedArray;
+        }
+
+        static string TrimParenthesis(this string target) => target.Trim('[', ']', ' ', '\n');
 
     }
 }

@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using System;
 
 namespace Algorithm.Algorithms
 {
@@ -35,8 +32,72 @@ namespace Algorithm.Algorithms
         /// <returns>바위를 n개 제거한 뒤 각 지점 사이의 거리의 최솟값 중에 가장 큰 값</returns>
         public static int Solution(int distance, int[] rocks, int n)
         {
+            Array.Sort(rocks);
+            int[] distances = new int[rocks.Length + 1];
+            int point = 0;
+            for(int i = 0 ; i < rocks.Length ; i++)
+            {
+                distances[i] = rocks[i] - point;
+                point = rocks[i];
+            }
+            distances[rocks.Length] = distance - point;
+
+            int lowDistance = 0;
+            int highDistance = distance;
+            int midDistance;
             int answer = 0;
+
+            while(lowDistance <= highDistance)
+            {
+                midDistance = (lowDistance + highDistance) / 2;
+
+                int removedRockCount = 0;
+                int distanceSum = 0;
+
+                for(int i = 0 ; i < distances.Length ; i++)
+                {
+                    distanceSum += distances[i];
+
+                    if(distanceSum < midDistance)
+                    {
+                        removedRockCount++;
+                    }
+                    else
+                        distanceSum = 0;
+                }
+
+                if(removedRockCount <= n)
+                {
+                    answer = Math.Max(answer, midDistance);
+                    lowDistance = midDistance + 1;
+                }
+                else
+                {
+                    highDistance = midDistance - 1;
+                }
+            }
+
             return answer;
+        }
+
+        static int NeedStone(int[] distances, int distance)
+        {
+            int count = 0;
+            int sum = 0;
+
+            for(int i = 0 ; i < distances.Length ; i++)
+            {
+                sum += distances[i];
+
+                if(sum < distance)
+                {
+                    count++;
+                }
+                else
+                    sum = 0;
+            }
+
+            return count;
         }
     }
 }
