@@ -1,6 +1,7 @@
 ﻿using Algorithm.Algorithms;
 using Algorithm.Algorithms.Brute_Force;
 using Algorithm.Algorithms.Heap;
+using Algorithm.Algorithms.Test;
 using Algorithm.Functions;
 
 using System;
@@ -232,7 +233,25 @@ namespace Algorithm
             */
             #endregion
 
-            Show(Ranking.Solution(5, "[[4, 3], [4, 2], [3, 2], [1, 2], [2, 5]]".ToMultiArrays<int>()));
+
+
+
+            // Show(Immigration.Solution(100000000, new int[] { 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2 }));
+
+            //Show(SteppingStones.Solution(25, new int[] { 2, 14, 11, 21, 17 }, 2));
+            //Show(Ranking.Solution(5, "[[4, 3], [4, 2], [3, 2], [1, 2], [2, 5]]".ToMultiArrays<int>()));
+
+            //Show(Test.Solution(4).ToStrings());
+            //Show(Test.Solution(5).ToStrings());
+            //Show(Test.Solution(6).ToStrings());
+
+            int[] t = new int[2000000];
+            for(int i = 0 ; i < t.Length ; i++)
+                t[i] = i - 1000000;
+
+           // Show(Test.Solution(new int[] { -16, 27, 65, -2, 58, -92, -71, -68, -61, -33 }));
+            Show(Test.Solution(t));
+
 
         }
 
