@@ -101,6 +101,8 @@
     <Compile Include="Algorithms\Stack and Queue\PrinterQueue.cs" />
     <Compile Include="Algorithms\Stack and Queue\StockPrice.cs" />
     <Compile Include="Algorithms\Stack and Queue\TruckBridge.cs" />
+    <Compile Include="Algorithms\Trie\Trie.cs" />
+    <Compile Include="Algorithms\Trie\TrieTest.cs" />
     <Compile Include="Algorithms\Uncategorized\BiggerNumberGame.cs" />
     <Compile Include="Algorithms\Uncategorized\Cookie.cs" />
     <Compile Include="Algorithms\Uncategorized\DigitSum.cs" />

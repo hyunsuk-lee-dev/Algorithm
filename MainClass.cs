@@ -231,9 +231,10 @@ namespace Algorithm
 
             */
             #endregion
+            
+            //Show(Ranking.Solution(5, "[[4, 3], [4, 2], [3, 2], [1, 2], [2, 5]]".ToMultiArrays<int>()));
 
-            Show(Ranking.Solution(5, "[[4, 3], [4, 2], [3, 2], [1, 2], [2, 5]]".ToMultiArrays<int>()));
-
+            Show(TrieTest.Solution());
         }
 
         static void Show(object solution)
