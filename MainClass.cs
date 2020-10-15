@@ -1,7 +1,6 @@
 ﻿using Algorithm.Algorithms;
 using Algorithm.Algorithms.Brute_Force;
 using Algorithm.Algorithms.Heap;
-using Algorithm.Algorithms.Test;
 using Algorithm.Functions;
 
 using System;
@@ -231,8 +230,8 @@ namespace Algorithm
             Show(FarthestNode.Solution(6, "[[3, 6], [4, 3], [3, 2], [1, 3], [1, 2], [2, 4], [5, 2]]".ToMultiArrays<int>()));
 
             */
-            #endregion
-            
+
+
             //Show(Ranking.Solution(5, "[[4, 3], [4, 2], [3, 2], [1, 2], [2, 5]]".ToMultiArrays<int>()));
 
             //Show(TrieTest.Solution());
@@ -243,16 +242,29 @@ namespace Algorithm
             //Show(SteppingStones.Solution(25, new int[] { 2, 14, 11, 21, 17 }, 2));
             //Show(Ranking.Solution(5, "[[4, 3], [4, 2], [3, 2], [1, 2], [2, 5]]".ToMultiArrays<int>()));
 
-            //Show(Test.Solution(4).ToStrings());
-            //Show(Test.Solution(5).ToStrings());
-            //Show(Test.Solution(6).ToStrings());
+            #endregion
 
-            int[] t = new int[2000000];
-            for(int i = 0 ; i < t.Length ; i++)
-                t[i] = i - 1000000;
+            List<float> returns = new List<float>();
 
-           // Show(Test.Solution(new int[] { -16, 27, 65, -2, 58, -92, -71, -68, -61, -33 }));
-            Show(Test.Solution(t));
+            for(int i = 0 ; i < 30 ; i++)
+            {
+                returns.Add(
+                    Probability.GetRandom(1000,
+                    new ProbabiltyDistribution()
+                    {
+                        value = new int[] { 0, 1, 2, 3 },
+                        probability = new float[] { .2f, .4f, .3f, .1f }
+                    }, i * DateTime.Now.Millisecond)
+                );
+
+                Console.WriteLine();
+            }
+
+
+            Console.WriteLine(returns.ToStrings());
+
+            Console.WriteLine("Max : " + returns.Max());
+            Console.WriteLine("Min : " + returns.Min());
         }
 
         static void Show(object solution)
