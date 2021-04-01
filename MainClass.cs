@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Numerics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -244,27 +245,9 @@ namespace Algorithm
 
             #endregion
 
-            List<float> returns = new List<float>();
-
-            for(int i = 0 ; i < 30 ; i++)
-            {
-                returns.Add(
-                    Probability.GetRandom(1000,
-                    new ProbabiltyDistribution()
-                    {
-                        value = new int[] { 0, 1, 2, 3 },
-                        probability = new float[] { .2f, .4f, .3f, .1f }
-                    }, i * DateTime.Now.Millisecond)
-                );
-
-                Console.WriteLine();
-            }
-
-
-            Console.WriteLine(returns.ToStrings());
-
-            Console.WriteLine("Max : " + returns.Max());
-            Console.WriteLine("Min : " + returns.Min());
+            //Show(Adding.Solution("[2,1,3,4,1]".ToArrays<int>()).ToStrings());
+            //Show(Triangle.Solution(3).ToStrings());
+            Show(BinaryConverter.Solution("110010101001").ToStrings());
         }
 
         static void Show(object solution)

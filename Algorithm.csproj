@@ -94,6 +94,9 @@
     <Compile Include="Algorithms\Heap\Heap.cs" />
     <Compile Include="Algorithms\Heap\NoodleFactory.cs" />
     <Compile Include="Algorithms\Heap\SpicyFood.cs" />
+    <Compile Include="Algorithms\MonthlyChallenge1\Adding.cs" />
+    <Compile Include="Algorithms\MonthlyChallenge1\BinaryConverter.cs" />
+    <Compile Include="Algorithms\MonthlyChallenge1\Triangle.cs" />
     <Compile Include="Algorithms\Sort\H-Index.cs" />
     <Compile Include="Algorithms\Sort\KthNumber.cs" />
     <Compile Include="Algorithms\Stack and Queue\Developement.cs" />
@@ -107,6 +110,7 @@
     <Compile Include="Algorithms\Uncategorized\Cookie.cs" />
     <Compile Include="Algorithms\Uncategorized\DigitSum.cs" />
     <Compile Include="Algorithms\Uncategorized\Direction.cs" />
+    <Compile Include="Algorithms\KnightTravel\KnightTravel.cs" />
     <Compile Include="Algorithms\Uncategorized\ReceiptError.cs" />
     <Compile Include="Algorithms\Sort\BiggestNumber.cs" />
     <Compile Include="Functions\Arrays.cs" />
