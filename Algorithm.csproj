@@ -97,6 +97,9 @@
     <Compile Include="Algorithms\MonthlyChallenge1\Adding.cs" />
     <Compile Include="Algorithms\MonthlyChallenge1\BinaryConverter.cs" />
     <Compile Include="Algorithms\MonthlyChallenge1\Triangle.cs" />
+    <Compile Include="Algorithms\MonthlyChallenge2\CorrectParentheses.cs" />
+    <Compile Include="Algorithms\MonthlyChallenge2\SeparatedSignSum.cs" />
+    <Compile Include="Algorithms\MonthlyChallenge2\ZeroSumTree.cs" />
     <Compile Include="Algorithms\Sort\H-Index.cs" />
     <Compile Include="Algorithms\Sort\KthNumber.cs" />
     <Compile Include="Algorithms\Stack and Queue\Developement.cs" />

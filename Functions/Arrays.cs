@@ -25,6 +25,20 @@ namespace Algorithm.Functions
             return result;
         }
 
+        public static T[,] ConvertListTo2DArray<T>(this List<T[]> list)
+        {
+            T[,] result = new T[list.Count, list[0].Length];
+            for(int i = 0; i < list.Count; i++)
+            {
+                for(int j = 0; j < list[i].Length; j++)
+                {
+                    result[i, j] = list[i][j];
+                }
+            }
+
+            return result;
+        }
+
         public static string[,] ConvertDimensionalArray(string[][] value)
         {
             string[,] result = new string[value.Length, value[0].Length];
