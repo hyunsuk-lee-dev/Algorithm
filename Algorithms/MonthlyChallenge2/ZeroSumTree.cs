@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Algorithm.Algorithms.Tree;
 
 namespace Algorithm.Algorithms
 {
@@ -24,69 +25,65 @@ namespace Algorithm.Algorithms
             {
                 return -1;
             }
-            else if(a.Length == 2 && edges.Length > 0)
+
+            if(a.Length == 1)
             {
-                return Math.Abs(a[0]);
+                return 0;
             }
 
-            int[] edgeCount = new int[a.Length];
-            for(int aIndex = 0; aIndex < a.Length; aIndex++)
-            {
-                edgeCount[aIndex] = 0;
+            Tree<int> tree = new Tree<int>();
+            tree.rootNode = new TreeNode<int>(a[0]);
 
-                for(int edgeIndex = 0; edgeIndex < edges.GetLength(0); edgeIndex++)
-                {
-                    if(edges[edgeIndex, 0] == aIndex || edges[edgeIndex, 1] == aIndex)
-                    {
-                        edgeCount[aIndex]++;
-                    }
-                }
-            }
+            List<int[]> edgeList = edges.Convert2DArrayToList();
 
-            int targetAIndex = Array.IndexOf(edgeCount, 1);
+
+
 
 
             List<int> aList = a.ToList();
-            List<int[]> edgeList = edges.Convert2DArrayToList();
 
-            for(int edgeIndex = 0; edgeIndex < edges.GetLength(0); edgeIndex++)
+
+            List<int> edgeCounts = new List<int>(aList);
+            for(int i = 0; i < edgeCounts.Count; i++)
             {
-                int count = aList[targetAIndex];
-                if(edgeList[edgeIndex][0] == targetAIndex)
-                {
-                    aList[edgeList[edgeIndex][1]] += aList[targetAIndex];
-                    aList[targetAIndex] = 0;
-                }
-                else if(edges[edgeIndex, 1] == targetAIndex)
-                {
-                    aList[edgeList[edgeIndex][0]] += aList[targetAIndex];
-                    aList[targetAIndex] = 0;
-                }
-                else
-                {
-                    continue;
-                }
-
-                aList.RemoveAt(targetAIndex);
-                edgeList.RemoveAt(edgeIndex);
-
-                for(int i = 0; i < edgeList.Count; i++)
-                {
-                    if(edgeList[i][0] > targetAIndex)
-                    { 
-                        edgeList[i][0]--;
-                    }
-
-                    if(edgeList[i][1] > targetAIndex)
-                    {
-                        edgeList[i][1]--;
-                    }
-                }
-
-                return Solution(aList.ToArray(), edgeList.ConvertListTo2DArray()) + Math.Abs(count);
+                edgeCounts[i] = 0;
             }
 
-            return -1;
+            for(int i = 0; i < edgeList.Count; i++)
+            {
+                edgeCounts[edgeList[i][0]]++;
+                edgeCounts[edgeList[i][1]]++;
+            }
+
+            int move = 0;
+
+
+            for(int i = 0; i < edgeCounts.Count; i++)
+            {
+                if(edgeCounts[i] == 1)
+                {
+                    aList.RemoveAt(i);
+                    edgeCounts.RemoveAt(i);
+
+                    edgeList = edgeList.FindAll(o => o[0] != i && o[1] != i);
+
+                    for(int j = 0; j < edgeList.Count; j++)
+                    {
+                        if(edgeList[j][0] > i)
+                        {
+                            edgeList[j][0]--;
+                        }
+                        else if(edgeList[j][1] > i)
+                        {
+                            edgeList[j][1]--;
+                        }
+                    }
+
+                    break;
+                }
+            }
+
+            return 0;
         }
     }
 }
