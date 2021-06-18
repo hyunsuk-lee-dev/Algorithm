@@ -31,17 +31,7 @@ namespace Algorithm.Algorithms
         /// <returns>주어진 행동을 통해 트리의 모든 점들의 가중치를 0으로 만드는 것이 불가능하다면 -1을, 가능하다면 최소 몇 번만에 가능한지</returns>
         public static long Solution(int[] a, int[,] edges)
         {
-            if(a.Sum() != 0)
-            {
-                return -1;
-            }
-
-            answer = 0;
-            visited = new bool[a.Length];
-            for(int i = 0; i < visited.Length; i++)
-            {
-                visited[i] = false;
-            }
+            long answer = 0;
 
             bool[,] adjacent = new bool[a.Length, a.Length];
             for(int i = 0; i < edges.GetLength(0); i++)
@@ -56,34 +46,35 @@ namespace Algorithm.Algorithms
                 longA[i] = a[i];
             }
 
+            bool[] visited = new bool[a.Length];
 
+            Stack<(int current, int parent)> stack = new Stack<(int current, int parent)>();
+            stack.Push((0, 0));
 
-
-            DFS(longA, adjacent, 0, 0);
-
-            return answer;
-        }
-
-        private static long answer = 0;
-        private static bool[] visited;
-
-        private static void DFS(long[] a, bool[,] adjacent, int current, int parent)
-        {
-            visited[current] = true;
-
-            for(int i = 0; i < a.Length; i++)
+            while(stack.Count > 0)
             {
-                if(adjacent[current, i] && !visited[i])
+                (int current, int parent) vertex = stack.Pop();
+
+                if(visited[vertex.current])
                 {
-                    DFS(a, adjacent, i, current);
+                    a[vertex.parent] += a[vertex.current];
+                    answer += Math.Abs(a[vertex.current]);
+                    continue;
+                }
+
+                visited[vertex.current] = true;
+                stack.Push(vertex);
+
+                for(int i = 0; i < a.Length; i++)
+                {
+                    if(adjacent[vertex.current, i] && !visited[i])
+                    {
+                        stack.Push((i, vertex.current));
+                    }
                 }
             }
 
-            if(current != parent)
-            {
-                a[parent] += a[current];
-                answer += Math.Abs(a[current]);
-            }
+            return a[0] == 0 ?answer : -1;
         }
     }
 }

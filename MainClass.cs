@@ -252,7 +252,7 @@ namespace Algorithm
             //Show(TreeTest.Solution());
 
             Show(ZeroSumTree.Solution("[-5,0,2,1,2]".ToArrays<int>(), "[[0,1],[3,4],[2,3],[0,3]]".ToMultiArrays<int>()));
-           // Show(ZeroSumTree.Solution("[0,1,0]".ToArrays<int>(), "[[0,1],[1,2]]".ToMultiArrays<int>()));
+            Show(ZeroSumTree.Solution("[0,1,0]".ToArrays<int>(), "[[0,1],[1,2]]".ToMultiArrays<int>()));
 
             // Show(RORGame.Solution("[[1,0,1,1,1],[1,0,1,0,1],[1,0,1,1,1],[1,1,1,0,1],[0,0,0,0,1]]".ToMultiArrays<int>()));
 
