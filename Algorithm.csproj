@@ -81,6 +81,7 @@
     <Compile Include="Algorithms\Graph\Ranking.cs" />
     <Compile Include="Algorithms\Graph\RORGame.cs" />
     <Compile Include="Algorithms\Greedy\BalancingScale.cs" />
+    <Compile Include="Algorithms\Greedy\Ballon.cs" />
     <Compile Include="Algorithms\Greedy\BigNumber.cs" />
     <Compile Include="Algorithms\Greedy\GymSuit.cs" />
     <Compile Include="Algorithms\Greedy\IslandConnection.cs" />
