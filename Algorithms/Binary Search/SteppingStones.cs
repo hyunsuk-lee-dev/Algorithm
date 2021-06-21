@@ -54,7 +54,7 @@ namespace Algorithm.Algorithms
                 int removedRockCount = 0;
                 int distanceSum = 0;
 
-                for(int i = 0 ; i < distances.Length ; i++)
+                for(int i = 0; i < distances.Length; i++)
                 {
                     distanceSum += distances[i];
 
@@ -78,26 +78,6 @@ namespace Algorithm.Algorithms
             }
 
             return answer;
-        }
-
-        static int NeedStone(int[] distances, int distance)
-        {
-            int count = 0;
-            int sum = 0;
-
-            for(int i = 0 ; i < distances.Length ; i++)
-            {
-                sum += distances[i];
-
-                if(sum < distance)
-                {
-                    count++;
-                }
-                else
-                    sum = 0;
-            }
-
-            return count;
         }
     }
 }

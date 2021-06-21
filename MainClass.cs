@@ -260,15 +260,16 @@ namespace Algorithm
             //Show(JoystickName.Solution("JEROEN"));
             //Show(JoystickName.Solution("AABAAAAAAABBB"));
 
-            Show(Ballon.Solution("[9,-1,-5]".ToArrays<int>()));
-            Show(Ballon.Solution("[-16,27,65,-2,58,-92,-71,-68,-61,-33]".ToArrays<int>()));
+            //Show(Ballon.Solution("[9,-1,-5]".ToArrays<int>()));
+            //Show(Ballon.Solution("[-16,27,65,-2,58,-92,-71,-68,-61,-33]".ToArrays<int>()));
 
+            Show(Rock.Solution(16, "[4,8,11]".ToArrays<int>(), 2));
         }
 
         static void Show(object solution)
         {
-            Console.WriteLine(solution);
-            Console.WriteLine($"Duration : {stopwatch.ElapsedMilliseconds - elapsedTime}ms");
+            Console.WriteLine($"Answer: {solution}");
+            Console.WriteLine($"Duration: {stopwatch.ElapsedMilliseconds - elapsedTime}ms");
             elapsedTime = stopwatch.ElapsedMilliseconds;
             Console.WriteLine();
         }
