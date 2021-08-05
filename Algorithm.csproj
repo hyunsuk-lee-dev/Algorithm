@@ -116,7 +116,6 @@
     <Compile Include="Algorithms\Uncategorized\BiggerNumberGame.cs" />
     <Compile Include="Algorithms\Uncategorized\Cookie.cs" />
     <Compile Include="Algorithms\Uncategorized\DigitSum.cs" />
-    <Compile Include="Algorithms\Uncategorized\Rock.cs" />
     <Compile Include="Functions\Printer.cs" />
     <Compile Include="Miscellaneous\Direction.cs" />
     <Compile Include="Algorithms\KnightTravel\KnightTravel.cs" />

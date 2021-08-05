@@ -243,7 +243,7 @@ namespace Algorithm
             //Show(SteppingStones.Solution(25, new int[] { 2, 14, 11, 21, 17 }, 2));
             //Show(Ranking.Solution(5, "[[4, 3], [4, 2], [3, 2], [1, 2], [2, 5]]".ToMultiArrays<int>()));
 
-            #endregion
+
 
             //Show(Adding.Solution("[2,1,3,4,1]".ToArrays<int>()).ToStrings());
             //Show(Triangle.Solution(3).ToStrings());
@@ -263,7 +263,8 @@ namespace Algorithm
             //Show(Ballon.Solution("[9,-1,-5]".ToArrays<int>()));
             //Show(Ballon.Solution("[-16,27,65,-2,58,-92,-71,-68,-61,-33]".ToArrays<int>()));
 
-            Show(Rock.Solution(16, "[4,8,11]".ToArrays<int>(), 2));
+            //Show(Rock.Solution(16, "[4,8,11]".ToArrays<int>(), 2));
+            #endregion
         }
 
         static void Show(object solution)
