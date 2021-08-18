@@ -15,8 +15,8 @@ namespace Algorithm
         {
             stopwatch.Start();
 
-            Show(GameMapShortestPath.Solution("[[1,0,1,1,1],[1,0,1,0,1],[1,0,1,1,1],[1,1,1,0,1],[0,0,0,0,1]]".ToMultiArrays<int>())); // 11
-            Show(GameMapShortestPath.Solution("[[1,0,1,1,1],[1,0,1,0,1],[1,0,1,1,1],[1,1,1,0,0],[0,0,0,0,1]]".ToMultiArrays<int>())); // -1
+            Show(LongestPalindrome.Solution("abcdcba"));
+            Show(LongestPalindrome.Solution("abaaba"));
         }
 
         public static void Show(object solution)
