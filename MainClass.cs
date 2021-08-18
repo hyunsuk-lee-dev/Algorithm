@@ -14,7 +14,9 @@ namespace Algorithm
         public static void Main(string[] args)
         {
             stopwatch.Start();
-            
+
+            Show(GameMapShortestPath.Solution("[[1,0,1,1,1],[1,0,1,0,1],[1,0,1,1,1],[1,1,1,0,1],[0,0,0,0,1]]".ToMultiArrays<int>())); // 11
+            Show(GameMapShortestPath.Solution("[[1,0,1,1,1],[1,0,1,0,1],[1,0,1,1,1],[1,1,1,0,0],[0,0,0,0,1]]".ToMultiArrays<int>())); // -1
         }
 
         public static void Show(object solution)
