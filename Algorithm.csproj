@@ -1,18 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{81B991B5-4A25-4F5F-8A86-723B0B81EFB0}</ProjectGuid>
+    <TargetFramework>net5.0</TargetFramework>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Algorithm</RootNamespace>
-    <AssemblyName>Algorithm</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -25,133 +15,13 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>Algorithm.MainClass</StartupObject>
   </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Numerics" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Algorithms\Binary Search\Budget.cs" />
-    <Compile Include="Algorithms\Binary Search\Immigration.cs" />
-    <Compile Include="Algorithms\Binary Search\SteppingStones.cs" />
-    <Compile Include="Algorithms\Brute Force\Carpet.cs" />
-    <Compile Include="Algorithms\Brute Force\FindingPrimeNumber.cs" />
-    <Compile Include="Algorithms\Brute Force\MockExam.cs" />
-    <Compile Include="Algorithms\Deep-First Search and Breadth-First Search\TravelRoute.cs" />
-    <Compile Include="Algorithms\Deep-First Search and Breadth-First Search\WordChanger.cs" />
-    <Compile Include="Algorithms\Brute Force\NumberBaseball.cs" />
-    <Compile Include="Algorithms\Dynamic Programming\CardGame.cs" />
-    <Compile Include="Algorithms\Dynamic Programming\TravelFundRaising.cs" />
-    <Compile Include="Algorithms\Dynamic Programming\IntegerTriangle.cs" />
-    <Compile Include="Algorithms\Dynamic Programming\SchoolRoad.cs" />
-    <Compile Include="Algorithms\Dynamic Programming\Thievery.cs" />
-    <Compile Include="Algorithms\Graph\FarthestNode.cs" />
-    <Compile Include="Algorithms\Graph\Ranking.cs" />
-    <Compile Include="Algorithms\Graph\RORGame.cs" />
-    <Compile Include="Algorithms\Greedy\BalancingScale.cs" />
-    <Compile Include="Algorithms\Greedy\Ballon.cs" />
-    <Compile Include="Algorithms\Greedy\BigNumber.cs" />
-    <Compile Include="Algorithms\Greedy\GymSuit.cs" />
-    <Compile Include="Algorithms\Greedy\IslandConnection.cs" />
-    <Compile Include="Algorithms\Greedy\JoyStick.cs" />
-    <Compile Include="Algorithms\Greedy\JoystickName.cs" />
-    <Compile Include="Algorithms\Greedy\LifeBoat.cs" />
-    <Compile Include="Algorithms\Greedy\PoliceCamera.cs" />
-    <Compile Include="Algorithms\Hash\BestAlbum.cs" />
-    <Compile Include="Algorithms\Hash\FailureRunner.cs" />
-    <Compile Include="Algorithms\Hash\PhoneBook.cs" />
-    <Compile Include="Algorithms\Heap\DiscController.cs" />
-    <Compile Include="Algorithms\Heap\DoublePriorityQueue.cs" />
-    <Compile Include="Algorithms\Heap\Heap.cs" />
-    <Compile Include="Algorithms\Heap\NoodleFactory.cs" />
-    <Compile Include="Algorithms\Heap\SpicyFood.cs" />
-    <Compile Include="Algorithms\MonthlyChallenge1\Adding.cs" />
-    <Compile Include="Algorithms\MonthlyChallenge1\BinaryConverter.cs" />
-    <Compile Include="Algorithms\MonthlyChallenge1\Triangle.cs" />
-    <Compile Include="Algorithms\MonthlyChallenge2\CorrectParentheses.cs" />
-    <Compile Include="Algorithms\MonthlyChallenge2\SeparatedSignSum.cs" />
-    <Compile Include="Algorithms\MonthlyChallenge2\ZeroSumTree.cs" />
-    <Compile Include="Algorithms\Sort\H-Index.cs" />
-    <Compile Include="Algorithms\Sort\KthNumber.cs" />
-    <Compile Include="Algorithms\Stack and Queue\Developement.cs" />
-    <Compile Include="Algorithms\Stack and Queue\PipeCutting.cs" />
-    <Compile Include="Algorithms\Stack and Queue\PrinterQueue.cs" />
-    <Compile Include="Algorithms\Stack and Queue\StockPrice.cs" />
-    <Compile Include="Algorithms\Stack and Queue\TruckBridge.cs" />
-    <Compile Include="Algorithms\String\JadenCase.cs" />
-    <Compile Include="Algorithms\Trie\Trie.cs" />
-    <Compile Include="Algorithms\Trie\TrieTest.cs" />
-    <Compile Include="Algorithms\Uncategorized\BiggerNumberGame.cs" />
-    <Compile Include="Algorithms\Uncategorized\Cookie.cs" />
-    <Compile Include="Algorithms\Uncategorized\DigitSum.cs" />
-    <Compile Include="Functions\Printer.cs" />
-    <Compile Include="Miscellaneous\Direction.cs" />
-    <Compile Include="Algorithms\KnightTravel\KnightTravel.cs" />
-    <Compile Include="Algorithms\Uncategorized\ReceiptError.cs" />
-    <Compile Include="Algorithms\Sort\BiggestNumber.cs" />
-    <Compile Include="Functions\Arrays.cs" />
-    <Compile Include="Functions\ArrayComparer.cs" />
-    <Compile Include="Functions\PrimeNumber.cs" />
-    <Compile Include="Miscellaneous\DirectionSimulation.cs" />
-    <Compile Include="Algorithms\Uncategorized\PermutationCheck.cs" />
-    <Compile Include="Algorithms\Uncategorized\RemainderPoint.cs" />
-    <Compile Include="Algorithms\Dynamic Programming\Sticker.cs" />
-    <Compile Include="Algorithms\Uncategorized\Tournament.cs" />
-    <Compile Include="Algorithms\Stack and Queue\Tower.cs" />
-    <Compile Include="Algorithms\Dynamic Programming\WordPuzzle.cs" />
-    <Compile Include="Algorithms\Dynamic Programming\EquationN.cs" />
-    <Compile Include="Algorithms\Deep-First Search and Breadth-First Search\Network.cs" />
-    <Compile Include="MainClass.cs" />
-    <Compile Include="Miscellaneous\Probability.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Algorithms\Dynamic Programming\Tiles.cs" />
-    <Compile Include="Algorithms\Deep-First Search and Breadth-First Search\TargetNumber.cs" />
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
-    <Compile Include="Settings.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">
       <Visible>False</Visible>
@@ -164,6 +34,11 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.2.241603">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
 </Project>
