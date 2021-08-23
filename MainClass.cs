@@ -14,6 +14,18 @@ namespace Algorithm
         public static void Main(string[] args)
         {
             stopwatch.Start();
+
+            Show(CareerRecommend.Solution(
+                new string[] { "SI JAVA JAVASCRIPT SQL PYTHON C#", "CONTENTS JAVASCRIPT JAVA PYTHON SQL C++", "HARDWARE C C++ PYTHON JAVA JAVASCRIPT",
+                    "PORTAL JAVA JAVASCRIPT PYTHON KOTLIN PHP", "GAME C++ C# JAVASCRIPT C JAVA" },
+                new string[] { "PYTHON", "C++", "SQL" },
+                new int[] { 7, 5, 5 })); // HARDWARE
+
+            Show(CareerRecommend.Solution(
+                new string[] { "SI JAVA JAVASCRIPT SQL PYTHON C#", "CONTENTS JAVASCRIPT JAVA PYTHON SQL C++", "HARDWARE C C++ PYTHON JAVA JAVASCRIPT",
+                    "PORTAL JAVA JAVASCRIPT PYTHON KOTLIN PHP", "GAME C++ C# JAVASCRIPT C JAVA" },
+                new string[] { "JAVA", "JAVASCRIPT" },
+                new int[] { 7, 5 })); // PORTAL
         }
 
         public static void Show(object solution)
