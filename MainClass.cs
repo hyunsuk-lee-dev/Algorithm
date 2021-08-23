@@ -14,9 +14,6 @@ namespace Algorithm
         public static void Main(string[] args)
         {
             stopwatch.Start();
-
-            Show(LongestPalindrome.Solution("abcdcba"));
-            Show(LongestPalindrome.Solution("abaaba"));
         }
 
         public static void Show(object solution)

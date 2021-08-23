@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 namespace Algorithm.Algorithms
 {
     /// <summary>
+    /// JadenCase 문자열 만들기
+    /// https://programmers.co.kr/learn/courses/30/lessons/12951
     /// https://programmers.co.kr/skill_checks/280807
     /// Algorithm.Algorithms.String
     /// </summary>
