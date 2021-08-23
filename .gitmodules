@@ -1,0 +1,3 @@
+[submodule "Private-Algorithm"]
+	path = Private-Algorithm
+	url = https://github.com/leehs27/Private-Algorithm.git
