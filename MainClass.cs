@@ -15,17 +15,12 @@ namespace Algorithm
         {
             stopwatch.Start();
 
-            Show(CareerRecommend.Solution(
-                new string[] { "SI JAVA JAVASCRIPT SQL PYTHON C#", "CONTENTS JAVASCRIPT JAVA PYTHON SQL C++", "HARDWARE C C++ PYTHON JAVA JAVASCRIPT",
-                    "PORTAL JAVA JAVASCRIPT PYTHON KOTLIN PHP", "GAME C++ C# JAVASCRIPT C JAVA" },
-                new string[] { "PYTHON", "C++", "SQL" },
-                new int[] { 7, 5, 5 })); // HARDWARE
+            Show(CheckInCheckOut.Solution(new int[4] { 1, 4, 2, 3 }, new int[4] { 2, 1, 3, 4 }).ToStrings()); // 2,2,1,3
 
-            Show(CareerRecommend.Solution(
-                new string[] { "SI JAVA JAVASCRIPT SQL PYTHON C#", "CONTENTS JAVASCRIPT JAVA PYTHON SQL C++", "HARDWARE C C++ PYTHON JAVA JAVASCRIPT",
-                    "PORTAL JAVA JAVASCRIPT PYTHON KOTLIN PHP", "GAME C++ C# JAVASCRIPT C JAVA" },
-                new string[] { "JAVA", "JAVASCRIPT" },
-                new int[] { 7, 5 })); // PORTAL
+            Show(CheckInCheckOut.Solution(new int[3] { 1, 3, 2 }, new int[3] { 1, 2, 3 }).ToStrings()); // 0,1,1
+            Show(CheckInCheckOut.Solution(new int[3] { 3, 2, 1 }, new int[3] { 2, 1, 3 }).ToStrings()); // 1,1,2
+            Show(CheckInCheckOut.Solution(new int[3] { 3, 2, 1 }, new int[3] { 1, 3, 2 }).ToStrings()); // 2,2,2
+            Show(CheckInCheckOut.Solution(new int[4] { 1, 4, 2, 3 }, new int[4] { 2, 1, 4, 3 }).ToStrings()); // 2,2,0,2
         }
 
         public static void Show(object solution)
